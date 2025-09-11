@@ -17,8 +17,14 @@ public class UserBookingService {
     private static final String USERS_PATH="app/src/main/java/ticket/booking/localDb/users.json";
     public UserBookingService(User user1) throws IOException{
         this.user=user1;
-        File users= new File(USERS_PATH);
-        userList = objectMapper.readValue(users,new TypeReference<List<User>>() {});
+        loadUsers();
+    }
+    public UserBookingService()throws IOException{
+        loadUsers();
+    }
+    public List<User> loadUsers() throws IOException{
+        File users=new File(USERS_PATH);
+        return objectMapper.readValue(users, new TypeReference<List<User>>() {});
     }
     public Boolean loginUser(){
         Optional<User> foundUser= userList.stream().filter(user1->{
