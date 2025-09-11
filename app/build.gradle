@@ -23,6 +23,10 @@ dependencies {
 
     // This dependency is used by the application.
     implementation libs.guava
+    //This dependency is added for serializing and deserializing
+     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.1'
+     //This depenecy is for hashing the pasword
+      implementation 'org.mindrot:jbcrypt:0.3'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
