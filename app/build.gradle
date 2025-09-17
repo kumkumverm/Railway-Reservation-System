@@ -26,7 +26,7 @@ dependencies {
     //This dependency is added for serializing and deserializing
      implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.1'
      //This depenecy is for hashing the pasword
-      implementation 'org.mindrot:jbcrypt:0.3'
+      implementation 'org.mindrot:jbcrypt:0.4'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
