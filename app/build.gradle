@@ -38,7 +38,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'irctcc.App'
+    mainClass = 'ticketBooking.App'
 }
 
 tasks.named('test') {
