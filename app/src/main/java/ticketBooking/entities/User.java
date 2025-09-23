@@ -2,16 +2,24 @@ package ticketBooking.entities;
 
 import java.util.List;
 
+// import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class User {
     private String name;
     private String password;
     private String hashPassword;
     private List<Ticket> ticketsBooked;
     private String userId;
-    public User(String name,String password,String hashedPassword,List<Ticket> ticketsBooked,String userId){
+    
+    public User(String name,String password,String hashPassword,List<Ticket> ticketsBooked,String userId){
         this.name=name;
         this.password=password;
-        this.hashPassword=hashedPassword;
+        this.hashPassword=hashPassword;
         this.ticketsBooked=ticketsBooked;
         this.userId=userId;
     }
